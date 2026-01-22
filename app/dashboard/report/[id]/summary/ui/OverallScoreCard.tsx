@@ -20,7 +20,7 @@ export function OverallScoreCard({ seoReport }: OverallScoreCardProps) {
   const score = Math.round(
     (seoReport?.summary?.overall_score ?? 0) < 1
       ? (seoReport?.summary?.overall_score ?? 0) * 100
-      : (seoReport?.summary?.overall_score ?? 0)
+      : (seoReport?.summary?.overall_score ?? 0),
   );
 
   // Determine gradient color based on score
