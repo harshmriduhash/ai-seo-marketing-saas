@@ -50,7 +50,7 @@ export function CompetitorStrengthCard({
           <div className="space-y-4">
             {competitorStrength.map((c, index) => {
               const percentage = Math.round(
-                c.strength < 1 ? c.strength * 100 : c.strength
+                c.strength < 1 ? c.strength * 100 : c.strength,
               );
               const isTop = index < 2;
               return (
