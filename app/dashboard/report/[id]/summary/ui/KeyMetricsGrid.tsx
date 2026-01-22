@@ -112,7 +112,7 @@ export function KeyMetricsGrid({ seoReport }: KeyMetricsGridProps) {
           <div className="flex-1 space-y-1 max-h-24 overflow-y-auto">
             {Object.entries(seoReport?.inventory?.source_types || {})
               .filter(
-                ([, sources]) => Array.isArray(sources) && sources.length > 0
+                ([, sources]) => Array.isArray(sources) && sources.length > 0,
               )
               .map(([type, sources]) => (
                 <div
@@ -169,7 +169,7 @@ export function KeyMetricsGrid({ seoReport }: KeyMetricsGridProps) {
                       {Math.round(
                         competitor.strength_score < 1
                           ? competitor.strength_score * 100
-                          : competitor.strength_score
+                          : competitor.strength_score,
                       )}
                       %
                     </Badge>
