@@ -16,7 +16,7 @@ export function OverallScoreCard({ seoReport }: OverallScoreCardProps) {
     return num.toLocaleString();
   };
 
-  // Calculate the actual score for gradient logic
+  // Calculate the actual score for gradient logic 
   const score = Math.round(
     (seoReport?.summary?.overall_score ?? 0) < 1
       ? (seoReport?.summary?.overall_score ?? 0) * 100
