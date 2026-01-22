@@ -143,7 +143,7 @@ export function KeywordsAnalysisGrid({ seoReport }: KeywordsAnalysisGridProps) {
                     </div>
                   </div>
                 );
-              }
+              },
             )}
             {(!seoReport?.keywords?.content_keywords ||
               seoReport.keywords.content_keywords.length === 0) && (
