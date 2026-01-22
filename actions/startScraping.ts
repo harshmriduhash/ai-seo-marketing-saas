@@ -14,7 +14,7 @@ if (!process.env.BRIGHTDATA_API_KEY) {
 const startScraping = async (
   prompt: string,
   existingJobId?: string,
-  country: string = "US"
+  country: string = "US",
 ) => {
   const { userId } = await auth();
 
@@ -74,7 +74,7 @@ const startScraping = async (
   const WEBHOOK_URL = `${process.env.NEXT_PUBLIC_CONVEX_SITE_URL}${ApiPath.Webhook}?jobId=${jobId}`;
   const encodedWebhookUrl = encodeURIComponent(WEBHOOK_URL);
 
-  const datasetId = process.env.BRIGHTDATA_DATASET_ID; 
+  const datasetId = process.env.BRIGHTDATA_DATASET_ID;
 
   if (!datasetId) {
     throw new Error("BRIGHTDATA_DATASET_ID is not set");
