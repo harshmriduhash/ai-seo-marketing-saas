@@ -29,7 +29,7 @@ export function AdditionalAnalysisGrid({
   const contentThemes = (seoReport?.content_analysis?.content_themes || [])
     .map((t) => ({ theme: t.theme, frequency: t.frequency }))
     .filter(
-      (t) => typeof t.frequency === "number" && Number.isFinite(t.frequency)
+      (t) => typeof t.frequency === "number" && Number.isFinite(t.frequency),
     );
 
   return (
@@ -136,7 +136,7 @@ export function AdditionalAnalysisGrid({
                               className="text-xs bg-white/80 dark:bg-black/20"
                             >
                               {Math.round(
-                                source.evidence[0].relevance_score * 100
+                                source.evidence[0].relevance_score * 100,
                               )}
                               % relevance
                             </Badge>
@@ -146,7 +146,7 @@ export function AdditionalAnalysisGrid({
                     </div>
                   </div>
                 );
-              }
+              },
             )}
             {(!seoReport?.backlink_analysis?.backlink_sources ||
               seoReport.backlink_analysis.backlink_sources.length === 0) && (
@@ -251,18 +251,18 @@ export function AdditionalAnalysisGrid({
                 {(seoReport?.inventory?.unique_domains || []).map((domain) => {
                   // Find sources from this domain to get quality scores
                   const domainSources = Object.values(
-                    seoReport?.inventory?.source_types || {}
+                    seoReport?.inventory?.source_types || {},
                   )
                     .flat()
                     .filter(
-                      (source: { domain?: string }) => source.domain === domain
+                      (source: { domain?: string }) => source.domain === domain,
                     );
                   const avgQuality =
                     domainSources.length > 0
                       ? domainSources.reduce(
                           (acc: number, source: { quality_score?: number }) =>
                             acc + (source.quality_score || 0),
-                          0
+                          0,
                         ) / domainSources.length
                       : 0;
 
