@@ -54,7 +54,7 @@ export function KeyInsightsGrid({ seoReport }: KeyInsightsGridProps) {
                     </div>
                   </div>
                 </div>
-              )
+              ),
             )}
             {(!seoReport?.summary?.key_strengths ||
               seoReport.summary.key_strengths.length === 0) && (
