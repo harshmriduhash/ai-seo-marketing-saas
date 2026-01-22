@@ -88,7 +88,7 @@ export function SourceDistributionChart({
               sourceTypeEntries.map((e) => [
                 e.name,
                 { label: e.name, color: e.color },
-              ])
+              ]),
             )}
             className="h-[350px] w-full"
           >
@@ -135,9 +135,9 @@ export function SourceDistributionChart({
                       (entry.value /
                         sourceTypeEntries.reduce(
                           (sum, e) => sum + e.value,
-                          0
+                          0,
                         )) *
-                        100
+                        100,
                     )}
                     %
                   </div>
