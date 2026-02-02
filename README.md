@@ -186,10 +186,4 @@ npx convex dev
 
 ---
 
-## 👨‍💻 Author
-
-**Robert Johnson**  
-Full-Stack Software Engineer  
-🌐 https://robertjohnsonportfolio.com
-
 ---
